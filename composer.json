@@ -1,0 +1,32 @@
+{
+    "name": "topthink/think-addon",
+    "description": "addon package for thinkphp",
+    "authors": [
+        {
+            "name": "yunwuxin",
+            "email": "448901948@qq.com"
+        }
+    ],
+    "license": "Apache-2.0",
+    "require": {
+        "topthink/framework": "^6.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "think\\addon\\": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "think\\addon\\AddonService"
+            ],
+            "config":{
+                "addon": "src/config.php"
+            }            
+        }
+    }
+}
